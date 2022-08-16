@@ -27,3 +27,11 @@
   font-size: 1.75rem;
   letter-spacing: 3px;
 }
+
+.nav-link{
+  margin-right: 30px;
+}
+
+.Logo img{
+  max-height: 50px;
+}
