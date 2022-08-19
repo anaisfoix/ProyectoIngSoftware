@@ -1,5 +1,5 @@
 .Inscription{
-    background-color: #707d7e;
+    background-color: #575050;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -12,8 +12,8 @@
 }
 
 .hero__form{
-    background-color: #088085;
-    box-shadow: 2px 2px 5px 0 #242424;
+    background-color: #0a5cb8;
+    box-shadow: 2px 2px 5px 0 #014ba0;
     margin-top: 5vh;
     max-width: 380px;
     min-width: 380px;
@@ -105,4 +105,17 @@
   
   .ubication {
     height: 300px;
+  }
+
+  .Profesionals{
+    background-color: #afbabb;
+    padding-top: 10px;
+    
+  }
+  
+  .Profesionals h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
