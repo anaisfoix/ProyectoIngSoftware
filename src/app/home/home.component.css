@@ -1,3 +1,24 @@
+.vh-100 h1{
+    padding-top: 250px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.description img{
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.description h1{
+    text-align: right;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
 .Inscription{
     background-color: #212121;
     padding-top: 15px;
