@@ -1,32 +1,8 @@
-.vh-100 h1{
-    padding-top: 250px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.vh-100{
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.description img{
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.description h1{
-    text-align: right;
-    padding-top: 30px;
-    padding-left: 70px;
-}
 
 .Inscription{
     background-color: #212121;
-    padding-top: 15px;
+    padding-top: 100px;
     padding-bottom: 15px;
 }
 
@@ -102,25 +78,6 @@
     width: 100px;
 }
 
-.social-link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    border-radius: 50%;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.social-link:hover, .social-link:focus {
-    background: #ddd;
-    text-decoration: none;
-    color: #555;
-}
-
 .Inscription_button{
     padding-bottom: 20px;
 }
@@ -129,27 +86,3 @@
     padding-left: 67px;
 }
 
-.ubication{
-    width: 100%;
-}
-
-.ubication-item {
-    width: 100%;
-}
-  
-.ubication {
-height: 300px;
-}
-
-.Profesionals{
-background-color: #afbabb;
-padding-top: 10px;
-
-}
-
-.Profesionals h1{
-display: flex;
-justify-content: center;
-text-align: center;
-align-items: center;
-}
