@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InstallationsComponent } from './installations/installations.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ProfessionalsComponent } from './professionals/professionals.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     FooterComponent,
     InstallationsComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ProfessionalsComponent
   ],
   imports: [
     BrowserModule,
