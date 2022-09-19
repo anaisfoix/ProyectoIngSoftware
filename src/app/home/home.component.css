@@ -10,6 +10,8 @@
 
 .vh-100{
     background-repeat: no-repeat;
+    height: auto;
+    width: auto;
     background-size: 100%;
 }
 
@@ -31,6 +33,7 @@
 .description_text{
     display:flex;
     justify-content: center;
+    padding-right: 20px;
     align-items: center;
 }
 
@@ -513,16 +516,22 @@ height: 300px;
 }
 
 .recomendations {
-  height: 500px;
-  background-color: #b825b8;
+  padding-top: 30px;
+  padding-bottom: 30px;  
+  background-color: #3c7bb6;
   }
 
 .recomendations h1 {
-  align-self: center;
+  text-align: center;
+  color: #ffff;  
 }
 
-.recomendation-video video{
+.recomendations video{
   align-self: center;
   width: 100%;
   height: 100%;
+}
+
+.recomendations_row{
+  padding-bottom: 20px;
 }
