@@ -63,22 +63,31 @@
 <div class="container-fluid Inscription">
     <div class="row">
         <div class="container-fluid col-md-6 Inscription_title">
-            <h1>Para atención psicológica<br><img src="../assets/Fotos/flecha-azul-animada.gif" align="bottom"></h1>
+            <h1>Para atención psicológica<br><img src="../assets/Fotos/flecha-azul-animada.gif"></h1>
         </div>    
         <div class="container-fluid col-md-6 Inscription_button" id="Inscripcion">
-            <form _ngcontent-lhc-c43="" novalidate="" id="contactForm" class="hero__form col-md-8 ng-untouched ng-pristine ng-invalid">
+            <form _ngcontent-lhc-c43=""  [formGroup]="contactForm" class="hero__form col-md-8 ng-untouched ng-pristine ng-invalid" (ngSubmit)="EnviarDatos()">
                 <div _ngcontent-lhc-c43="">
                     <p _ngcontent-lhc-c43="">Agenda tu hora de consulta</p>                
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
-                    <label _ngcontent-lhc-c43="" for="name" value="name"></label>
-                    <input _ngcontent-lhc-c43="" formcontrolname="name" type="text" id="name" aria-describedby="name" placeholder="Ingresa tu nombre completo" class="form-control ng-untouched ng-pristine ng-invalid">
+                     <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert">
+                        <div *ngIf="nombre.errors?.['required']">
+                            Nombre obligatorio
+                          </div>
+
+                          <div *ngIf="nombre.errors?.['minlength']">
+                           nombre mayor de 4 caracteres
+                          </div>
+                    </div>
+                    <label _ngcontent-lhc-c43="" for="name" value="name" ></label>
+                    <input _ngcontent-lhc-c43="" type="text" formControlName="nombre" aria-describedby="name" placeholder="Ingresa tu nombre completo" class="form-control ng-untouched ng-pristine ng-invalid">
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
                     <label _ngcontent-lhc-c43="" for="ni" value="ni"></label>
-                    <input _ngcontent-lhc-c43="" formcontrolname="ni" type="text" id="rut" placeholder="Ingresa tu RUT" class="form-control ng-untouched ng-pristine ng-invalid">
+                    <input _ngcontent-lhc-c43=""  type="text" formControlName="rut" placeholder="Ingresa tu RUT" class="form-control ng-untouched ng-pristine ng-invalid">
                 </div>
-                <div _ngcontent-lhc-c43="" class="form-group">
+                <!--<div _ngcontent-lhc-c43="" class="form-group">
                     <label _ngcontent-lhc-c43="" for="mail" value="mail"></label>
                     <input _ngcontent-lhc-c43="" formcontrolname="mail" type="mail" id="email" placeholder="Ingresa tu correo electrónico" class="form-control ng-untouched ng-pristine ng-valid">
                 </div>
@@ -98,12 +107,11 @@
                             <option _ngcontent-lhc-c43="" value="Divorcio Unilateral">Atencion Parejas</option>
                         </select>
                     </div>
-                </div>                    
+                </div>  -->                  
                     <div _ngcontent-lhc-c43="" class="form-group">
-                        <button _ngcontent-lhc-c43="" type="button" id="send" class="btn btn-warning" disabled=""> Envía tu consulta. </button>
+                        <button type="submit" id="send" class="btn btn-warning"> Envía tu consulta. </button>
                     </div>
             </form>
         </div>
-    </div>    
-</div>
 
+  </div>
