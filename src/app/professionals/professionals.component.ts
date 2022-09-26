@@ -34,9 +34,7 @@ export class ProfessionalsComponent implements OnInit {
     return this.contactForm.get('rut');
   }
 
-  get mails(): any {
-    return this.contactForm.get('mails');
-  }
+  get mails(): any {return this.contactForm.get('mails');}
 
   get phone(): any {
     return this.contactForm.get('phone');
