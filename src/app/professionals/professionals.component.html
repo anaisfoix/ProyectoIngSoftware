@@ -72,40 +72,58 @@
                 <div>
                     <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert">
                         <div *ngIf="nombre.errors?.['required']">
-                            Nombre obligatorio
+                            Nombre obligatorio!
                         </div>
                         <div *ngIf="nombre.errors?.['minlength']">
-                            Nombre minimo de 3 caracteres
+                            Nombre minimo de 3 caracteres!
+                        </div>
+                        <div *ngIf="nombre.errors?.['pattern']">
+                            Nombre no valido!
                         </div>
                     </div>
                 
                     <div *ngIf="rut.invalid && (rut.dirty || rut.touched)" class="alert">
                         <div *ngIf="rut.errors.required">
-                            Rut obligatorio
+                            Rut obligatorio!
+                        </div>
+                        <div *ngIf="rut.errors?.['pattern']">
+                            Rut en formato numerico (20242456-2)!
                         </div>
                     </div>
                 
                     <div *ngIf="mails.invalid && (mails.dirty || mails.touched)" class="alert">
                         <div *ngIf="mails.errors?.['required']">
-                            Mail obligatorio
+                            Mail obligatorio!
                         </div>
+                        <div *ngIf="mails.errors?.['email']">
+                            Escriba un Mail Valido!
                         </div>
+                    </div>
                     
                     <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert">
                         <div *ngIf="phone.errors?.['required']">
-                            Telefono obligatorio
+                            Telefono obligatorio!
+                        </div>
+                        <div *ngIf="phone.errors?.['pattern']">
+                            Telefono en formato numerico!
+                        </div>
+                        <div *ngIf="phone.errors?.['minLength']">
+                            Telefono minimo 8 caracteres!
+                        </div>
+                        <div *ngIf="phone.errors?.['maxLength']">
+                            Telefono maximo 8 caracteres!
                         </div>
                     </div>
                 
                     <div *ngIf="msg.invalid && (msg.dirty || msg.touched)" class="alert">
                         <div *ngIf="msg.errors?.['required']">
-                            Mensaje obligatorio
+                            Mensaje obligatorio!
                         </div>
                     </div>
                 
                     <div *ngIf="type.invalid && (type.dirty || type.touched)" class="alert">
                         <div *ngIf="type.errors?.['required']">
-                            Tipo de consulta obligatorio
+                            Tipo de consulta obligatorio!
                         </div>
                     </div>
                 </div>

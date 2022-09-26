@@ -11,10 +11,10 @@ export class ProfessionalsComponent implements OnInit {
   
   constructor(private fb:FormBuilder) {
     this.contactForm=this.fb.group(
-      { nombre:['',[Validators.required,Validators.minLength(3),Validators.pattern("a:z & A:Z")]],
-        rut:['',[Validators.required]],
-        mails:['',[Validators.required]],
-        phone:['',[Validators.required]],
+      { nombre:['',[Validators.required,Validators.minLength(3),Validators.pattern('[a-z A-Z]*')]],
+        rut:['',[Validators.required,Validators.pattern('[0-9 -]*')]],
+        mails:['',[Validators.required,Validators.email]],
+        phone:['',[Validators.required,Validators.minLength(8),Validators.maxLength(8),Validators.pattern('[0-9]*')]],
         msg:['',[Validators.required]],
         type:['',[Validators.required]]
       });
