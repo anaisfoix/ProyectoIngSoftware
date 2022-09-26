@@ -59,6 +59,46 @@
     </div>
 </div>
 
+<div>
+    <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert">
+        <div *ngIf="nombre.errors?.['required']">
+            Nombre obligatorio
+        </div>
+        <div *ngIf="nombre.errors?.['minlength']">
+            Nombre minimo de 3 caracteres
+        </div>
+    </div>
+
+    <div *ngIf="rut.invalid && (rut.dirty || rut.touched)" class="alert">
+        <div *ngIf="rut.errors.required">
+            Rut obligatorio
+        </div>
+    </div>
+
+    <div *ngIf="mails.invalid && (mails.dirty || mails.touched)" class="alert">
+        <div *ngIf="mails.errors?.['required']">
+            Mail obligatorio
+        </div>
+    </div>
+    
+    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert">
+        <div *ngIf="phone.errors?.['required']">
+            Telefono obligatorio
+        </div>
+    </div>
+
+    <div *ngIf="msg.invalid && (msg.dirty || msg.touched)" class="alert">
+        <div *ngIf="msg.errors?.['required']">
+            Mensaje obligatorio
+        </div>
+    </div>
+
+    <div *ngIf="type.invalid && (type.dirty || type.touched)" class="alert">
+        <div *ngIf="type.errors?.['required']">
+            Tipo de consulta obligatorio
+        </div>
+    </div>
+</div>
 
 <div class="container-fluid Inscription">
     <div class="row">
@@ -71,15 +111,6 @@
                     <p _ngcontent-lhc-c43="">Agenda tu hora de consulta</p>                
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
-                     <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert">
-                        <div *ngIf="nombre.errors?.['required']">
-                            Nombre obligatorio
-                          </div>
-
-                          <div *ngIf="nombre.errors?.['minlength']">
-                           nombre mayor de 4 caracteres
-                          </div>
-                    </div>
                     <label _ngcontent-lhc-c43="" for="name" value="name" ></label>
                     <input _ngcontent-lhc-c43="" type="text" formControlName="nombre" aria-describedby="name" placeholder="Ingresa tu nombre completo" class="form-control ng-untouched ng-pristine ng-invalid">
                 </div>
@@ -87,17 +118,17 @@
                     <label _ngcontent-lhc-c43="" for="ni" value="ni"></label>
                     <input _ngcontent-lhc-c43=""  type="text" formControlName="rut" placeholder="Ingresa tu RUT" class="form-control ng-untouched ng-pristine ng-invalid">
                 </div>
-                <!--<div _ngcontent-lhc-c43="" class="form-group">
+                <div _ngcontent-lhc-c43="" class="form-group">
                     <label _ngcontent-lhc-c43="" for="mail" value="mail"></label>
-                    <input _ngcontent-lhc-c43="" formcontrolname="mail" type="mail" id="email" placeholder="Ingresa tu correo electrónico" class="form-control ng-untouched ng-pristine ng-valid">
+                    <input _ngcontent-lhc-c43="" formcontrolname="mails" type="mail" placeholder="Ingresa tu correo electrónico" class="form-control ng-untouched ng-pristine ng-valid">
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
                     <label _ngcontent-lhc-c43="" for="phone" value="phoneNumber"></label>
-                    <input _ngcontent-lhc-c43="" formcontrolname="phone" type="phoneNumber" id="phoneNumber" aria-describedby="phoneNumber" placeholder="Teléfono" class="form-control ng-untouched ng-pristine ng-invalid">
+                    <input _ngcontent-lhc-c43="" formcontrolname="phone" type="phoneNumber"aria-describedby="phoneNumber" placeholder="Teléfono" class="form-control ng-untouched ng-pristine ng-invalid">
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
                     <label _ngcontent-lhc-c43="" for="msg"></label>
-                    <textarea _ngcontent-lhc-c43="" formcontrolname="msg" id="comment" rows="3" placeholder="Ingresa tu consulta" class="form-control ng-untouched ng-pristine ng-invalid"></textarea>
+                    <textarea _ngcontent-lhc-c43="" formcontrolname="msg" rows="3" placeholder="Ingresa tu consulta" class="form-control ng-untouched ng-pristine ng-invalid"></textarea>
                 </div>
                 <div _ngcontent-lhc-c43="" class="form-group">
                     <div _ngcontent-lhc-c43="" class="select">
@@ -107,7 +138,7 @@
                             <option _ngcontent-lhc-c43="" value="Divorcio Unilateral">Atencion Parejas</option>
                         </select>
                     </div>
-                </div>  -->                  
+                </div>                
                     <div _ngcontent-lhc-c43="" class="form-group">
                         <button type="submit" id="send" class="btn btn-warning"> Envía tu consulta. </button>
                     </div>
