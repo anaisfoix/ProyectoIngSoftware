@@ -99,3 +99,7 @@ align-items: center;
     padding-left: 67px;
 } 
 
+.alert{
+    color: black;
+    background-color: red;
+}
