@@ -159,13 +159,13 @@
 
                 <div *ngIf="contactForm.valid && (nombre.dirty && rut.dirty && mails.dirty && phone.dirty && msg.dirty && type.dirty)">
                     <div _ngcontent-lhc-c43="" class="form-group">
-                        <button type="submit" id="send" class="btn btn-warning"> Envía tu consulta. </button>
+                        <button (click)="ExitoFormulario()" type="submit" id="send" class="btn btn-warning"> Envía tu consulta. </button>
                     </div>
                 </div>
 
             </form>
         </div>
         
-        
+
 
   </div>

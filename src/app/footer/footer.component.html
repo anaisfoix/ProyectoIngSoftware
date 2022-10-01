@@ -70,7 +70,7 @@
             <!--Grid column-->
             <div *ngIf="mailForm.valid && (mail.dirty)" class="col-auto">
               <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
+              <button (click)="ExitoMail()" type="submit" class="btn btn-outline-light mb-4">
                 Subscribe
               </button>
             </div>

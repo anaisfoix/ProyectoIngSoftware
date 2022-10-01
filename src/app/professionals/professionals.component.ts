@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Form,Validators} from '@angular/forms';
+import Swal, {SweetAlertOptions} from 'sweetalert2';
 
 @Component({
   selector: 'app-professionals',
@@ -19,6 +20,14 @@ export class ProfessionalsComponent implements OnInit {
         type:['',[Validators.required]]
       });
    }
+
+   ExitoFormulario(){
+    Swal.fire({
+      title: 'Exito',
+      text: 'Su hora se a inscrito con exito recuerde llegar 10 minutos antes para comprar los bonos',
+      icon: 'success'
+    });
+  }
 
   ngOnInit(): void {
   }
