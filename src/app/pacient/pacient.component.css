@@ -37,15 +37,26 @@
     width: 93%;    
 }
 
+.form-group select{
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
 .select{
     position: relative;
-    margin-left: 38px;
+    align-self: center;
+    justify-content: center;
     display: flex;
-    width: 19em;
     height: 3em;
     line-height: 3;
     overflow: hidden;
     border-radius: .25em;
+}
+
+.select option{
+    color: #212121;
 }
 
 .hero__form button{
@@ -79,10 +90,6 @@
 .Inscription_button{
     padding-bottom: 20px;
 }
-
-.select{
-    padding-left: 67px;
-} 
 
 .alert{
     color: black;
