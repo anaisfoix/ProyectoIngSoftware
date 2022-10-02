@@ -75,3 +75,8 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
 }
+
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
