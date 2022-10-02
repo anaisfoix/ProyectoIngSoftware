@@ -22,11 +22,113 @@ export class ProfessionalsComponent implements OnInit {
    }
 
    ExitoFormulario(){
+    if(this.contactForm.valid){
+      Swal.fire({
+        title: 'Exito',
+        text: 'Su hora se a inscrito con exito recuerde llegar 10 minutos antes para comprar los bonos',
+        icon: 'success'
+      });
+    }
+    if(this.nombre.errors.required){
+      Swal.fire({
+        title: 'Error',
+        text: 'Falta un nombre que ingresar',
+        icon: 'error',
+        position: 'bottom-end'
+      });
+    }
+
+    if(this.nombre.errors.pattern){
+      Swal.fire({
+        title: 'Error',
+        text: 'Ingrese letras validas',
+        icon: 'error',
+        position: 'bottom-end'
+      });
+    }
+    if(this.nombre.errors){
+      Swal.fire({
+        title: 'Error',
+        text: 'Ingrese almenos 3 letras',
+        icon: 'error',
+        position: 'bottom-end'
+      });
+    }
+
+  if(this.rut.errors.required){
     Swal.fire({
-      title: 'Exito',
-      text: 'Su hora se a inscrito con exito recuerde llegar 10 minutos antes para comprar los bonos',
-      icon: 'success'
+      title: 'Error',
+      text: 'Ingrese un rut',
+      icon: 'error',
+      position: 'bottom-end'
     });
+  }
+  if(this.rut.errors.pattern){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese formato numeros validos',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.mails.errors.required){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese un mail',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.mails.errors.email){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese un mail valido',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.phone.errors.required){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese un numero de telefono',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.phone.errors){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese 8 numeros',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+
+  if(this.phone.errors.pattern){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese numeros validos',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.msg.errors.required){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese un mensaje',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+  if(this.type.errors.required){
+    Swal.fire({
+      title: 'Error',
+      text: 'Ingrese un tipo de consulta',
+      icon: 'error',
+      position: 'bottom-end'
+    });
+  }
+
   }
 
   ngOnInit(): void {

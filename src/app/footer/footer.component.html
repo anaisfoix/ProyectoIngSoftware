@@ -22,20 +22,12 @@
               <div class="form-outline form-white mb-4">
                 <input type="email" id="form5Example21" class="form-control" formControlName="mail" />
                 <label class="form-label" for="form5Example21">Direccion Correo Electronico</label>
-                <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="alert">
-                  <div *ngIf="mail.errors?.['required']">
-                      Mail obligatorio!
-                  </div>
-                  <div *ngIf="mail.errors?.['email']">
-                      Escriba un Mail Valido!
-                  </div>
-              </div>
               </div>
             </div>
             <!--Grid column-->
             
             <!--Grid column-->
-            <div *ngIf="mailForm.valid && (mail.dirty)" class="col-auto">
+            <div class="col-auto">
               <!-- Submit button -->
               <button (click)="ExitoMail()" type="submit" class="btn btn-outline-light mb-4">
                 Subscribe

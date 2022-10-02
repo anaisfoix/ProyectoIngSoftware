@@ -20,6 +20,6 @@
 </div>
 
 <div class="site-navigation container-fluid examples" role="navigation">        
-    <button type="button" class="btn btn-danger"><a routerLink="pacient"><span>Ingreso en caso de sección paciente</span></a></button>
-    <button type="button" class="btn btn-warning"><a routerLink="doctor"><span>Ingreso en caso de sección psicólogo</span></a></button>
+    <button type="button" (click)="navigatetopatient()" class="btn btn-danger"><a routerLink="pacient"><span>Ingreso en caso de sección paciente</span></a></button>
+    <button type="button" (click)="navigatetodoctor()" class="btn btn-warning"><a routerLink="doctor"><span>Ingreso en caso de sección psicólogo</span></a></button>
 </div>
