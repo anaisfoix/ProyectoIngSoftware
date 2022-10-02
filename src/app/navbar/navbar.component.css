@@ -369,8 +369,26 @@ a {
             align-items: flex-end;
           }
 
-.Logo img{
-  max-height: 50px;
+.Logo{
+  max-height: 50px;  
 }
 
 
+.navbar-color{
+  padding-top: 20px;
+  background-color:transparent;
+}
+
+.navbar-color a{
+  color: #fff;
+  font-size: medium;
+}
+
+@media (max-width: 500px){
+  .navbar-color{
+    background-color: #fff;
+  }
+  .navbar-color a{
+    color: #212529;
+  }
+}
