@@ -315,7 +315,7 @@ height: 300px;
 .card-area {
   background-color: #279eb2;
   align-items: center;
-
+  display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   padding: 1rem;
