@@ -1,0 +1,26 @@
+[
+    {
+        "Nombre": "Javiera Peña",
+        "Especialidad": "Trastorno ansiedad"
+    },
+    {
+        "Nombre": "Monica Rodriguez",
+        "Especialidad": "Trastorno Depresivo"
+    },
+    {
+        "Nombre": "Roberto Villalon",
+        "Especialidad": "Transtorno Bipolar"
+    },
+    {
+        "Nombre": "Antonio Montana",
+        "Especialidad": "Deficit de atencion"
+    },
+    {
+        "Nombre": "Stephanie Martiz",
+        "Especialidad": "Sindrome de asperger"
+    },
+    {
+        "Nombre": "Lucas Muñoz",
+        "Especialidad": "Transtorno Obsesivo Compulsivo"
+    }
+]
