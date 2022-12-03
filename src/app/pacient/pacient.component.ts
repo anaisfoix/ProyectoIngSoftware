@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormGroup,Form,Validators} from '@angular/forms';
 import Swal, {SweetAlertOptions} from 'sweetalert2';
+import { ListaPacientes, Pacientes } from '../interfaces/pacientes';
+import {ServFormularioPacientesService} from '../servicios/serv-formulario-pacientes.service'
 
 @Component({
   selector: 'app-pacient',
@@ -9,8 +11,13 @@ import Swal, {SweetAlertOptions} from 'sweetalert2';
 })
 export class PacientComponent implements OnInit {
   contactForm:FormGroup;
+
+  //Creamos una interfaz para los pacientes y aca declaramos un objeto que contenga los datos de un nuevo paciente
+  //Se puede declarar sin inicializar seteando el parametro "strictPropertyInitialization": false en tsconfig.json
+  nuevoPaciente: Pacientes;
   
-  constructor(private fb:FormBuilder) {
+  //Creamos un servicio para enviar los datos y lo declaramos en el constructor
+  constructor(private fb:FormBuilder, private servicio:ServFormularioPacientesService) {
     this.contactForm=this.fb.group(
       { nombre:['',[Validators.required,Validators.minLength(3),Validators.pattern('[a-z A-Z]*')]],
         rut:['',[Validators.required,Validators.pattern('[0-9 -]*')]],
@@ -28,6 +35,8 @@ export class PacientComponent implements OnInit {
         text: 'Su hora se a inscrito con exito recuerde llegar 10 minutos antes para comprar los bonos',
         icon: 'success'
       });
+      //Si el formulario es valido enviamos los datos
+      this.EnviarDatos();
     }
     if(this.nombre.errors.required){
       Swal.fire({
@@ -130,13 +139,27 @@ export class PacientComponent implements OnInit {
   }
 
   }
-
+  
   ngOnInit(): void {
   }
   EnviarDatos(){
-     console.log("Prueba");
+     //Aca ingresamos los datos obtenidos desde el formulario al objeto declarado arriba
+     // el operador ? es para verificar si el valor puede ser null
+     this.nuevoPaciente = {
+      id: Math.floor(Math.random() * 10000) + 1,
+      nombre: this.contactForm.get("nombre")?.value,
+      rut: this.contactForm.get("rut")?.value,
+      mails: this.contactForm.get("mails")?.value,
+      phoneNumber: this.contactForm.get("phone")?.value,
+      msg: this.contactForm.get("msg")?.value,
+      type: this.contactForm.get("type")?.value
+    }
+    // luego de crear el nuevo paciente usamos el servicio para enviar los datos
+    // para que se ejecuten las funciones, es necesario subscribirse 
+    this.servicio.addPaciente(this.nuevoPaciente).subscribe((data)=>(console.log(data)));
+    //this.servicio.delPaciente("PONER ALGUNA ID").subscribe((data)=>(console.log(data)));
   }
-
+  
   get nombre(): any {
     return this.contactForm.get('nombre');
   }

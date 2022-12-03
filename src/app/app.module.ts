@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { PacientComponent } from './pacient/pacient.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { TeamComponent } from './team/team.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { TeamComponent } from './team/team.component';
     LoginComponent,
     PacientComponent, 
     DoctorComponent, 
-    TeamComponent
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

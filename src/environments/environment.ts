@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //Hostname y puertos es la direccion y puerto donde esta activo el backend.js
+  hostname:'http://localhost',
+  puerto:'3000'
 };
 
 /*

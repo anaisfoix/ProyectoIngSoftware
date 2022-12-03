@@ -1,0 +1,43 @@
+//Pasos previos
+
+1.-Crear y levantar BD:
+	Primero crear una BD llamada test y ejecutar este script para crear una tabla y columnas de prueba
+	
+
+CREATE TABLE `pacientes` (
+	`id` INT(10) UNSIGNED NOT NULL,
+	`nombre` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`rut` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`mails` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`phoneNumber` INT(10) UNSIGNED NOT NULL,
+	`msg` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`type` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
+
+Dejar corriendo la base de datos en la URL http://localhost y puerto 3306
+
+2.-Instalar paquetes necesarios:
+
+npm install express --save
+npm install mysql --save 
+npm install body-parser --save
+
+
+3.-Iniciar backend:
+
+Abrir una consola de comandos en la carpeta ./backend y ejecutar
+node backend.js
+no cerrar esta ventana
+
+4.-Iniciar frontend:
+
+ejecutar ng serve 
+
+
+
+
+
